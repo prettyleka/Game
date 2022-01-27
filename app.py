@@ -1,5 +1,5 @@
 from flask import *
-
+from Game.tests.E2E import E2E
 app = Flask(__name__)
 
 
@@ -10,9 +10,6 @@ def returnHTML():
     html = open("app/templates/Score.html", "r+")
     text = html.read().format(SCORE=result)
     if result != "":
-        pass
+        return render_template('app/templates/Score.html')
     else:
         return render_template('app/templates/Error.html')
-
-if __name__ == '__main__':
-    app.run()
