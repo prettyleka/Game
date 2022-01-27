@@ -1,5 +1,5 @@
 from flask import *
-from Game.tests.E2E import E2E
+
 app = Flask(__name__)
 
 
