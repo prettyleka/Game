@@ -3,13 +3,6 @@ pipeline {
         dockerfile true
     }
     stages{
-        stage('Checkout repository') {
-            steps{
-                git branch: 'master',
-                credentialsId: '1e2a6958-df2b-410e-9e22-368b5216419e',
-                url: 'https://github.com/prettyleka/Game.git'
-        }
-    }
         stage('Run App') {
             steps {
                 sh 'python ./app.py'
