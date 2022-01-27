@@ -10,7 +10,7 @@ def returnHTML():
     html = open("app/templates/Score.html", "r+")
     text = html.read().format(SCORE=result)
     if result != "":
-        return text
+        pass
     else:
         return render_template('app/templates/Error.html')
 

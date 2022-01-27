@@ -25,4 +25,4 @@ class E2E:
 
 if __name__ == '__main__':
     w = E2E()
-    w.main_function(url="http://172.17.0.4:5000/")
+    w.main_function(url="http://127.0.0.1:5000/")
