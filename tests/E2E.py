@@ -1,7 +1,5 @@
-import os
 import AutoChromedriver
 from selenium import webdriver
-SELENIUM_GRID_HOST = os.environ.get('SELENIUM_GRID_HOST', 'localhost')
 
 
 class E2E:
