@@ -4,20 +4,20 @@ pipeline {
     }
     stages{
         stage('Checkout repository') {
-        steps{
-            git branch: 'master',
-            credentialsId: 'prettyleka',
-            url: 'https://github.com/prettyleka/Game.git'
+            steps{
+                git branch: 'master',
+                credentialsId: 'prettyleka',
+                url: 'https://github.com/prettyleka/Game.git'
         }
     }
         stage('Run App') {
-        steps {
-            sh 'python ./app.py'
+            steps {
+                sh 'python ./app.py'
         }
     }
         stage('Test with E2E') {
-        steps {
-            sh 'python ./tests/E2E.py'
+            steps {
+                sh 'python ./tests/E2E.py'
             }
         }
     }
