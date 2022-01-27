@@ -17,7 +17,7 @@ pipeline {
     }
         stage('Test with E2E') {
         steps {
-            sh 'python ./tests/e2e.py'
+            sh 'python ./tests/E2E.py'
             }
         }
     }
