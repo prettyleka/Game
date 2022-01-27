@@ -5,8 +5,9 @@ pipeline {
     stages{
         stage('Checkout repository') {
             steps{
-                  checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'prettyleka', url: 'https://github.com/prettyleka/Game.git']]])
-                sh "ls -lart ./*"
+                git branch: 'master',
+                credentialsId: '1e2a6958-df2b-410e-9e22-368b5216419e',
+                url: 'https://github.com/prettyleka/Game.git'
         }
     }
         stage('Run App') {
