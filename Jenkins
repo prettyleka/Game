@@ -10,7 +10,8 @@ pipeline {
     }
         stage('Test with E2E') {
             steps {
-                sh 'python3 ./tests/E2E.py'
+                    output = sh 'python3 ./tests/E2E.py'
+                    echo "the result is ${output}"
             }
         }
     }
