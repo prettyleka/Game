@@ -5,12 +5,12 @@ pipeline {
     stages{
         stage('Run App') {
             steps {
-                sh 'python ./app.py'
+                sh 'python3 ./app.py'
         }
     }
         stage('Test with E2E') {
             steps {
-                sh 'python ./tests/E2E.py'
+                sh 'python3 ./tests/E2E.py'
             }
         }
     }
