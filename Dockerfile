@@ -1,5 +1,5 @@
-# syntax=docker/dockerfile:1
-FROM python:3.8-slim-buster
+# Use an official Python runtime as a parent image
+FROM moditamam/selenium:python3
 
 WORKDIR /app
 
