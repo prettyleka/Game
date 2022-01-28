@@ -9,7 +9,3 @@ def returnHTML():
         return render_template('Score.html', SCORE=result)
     else:
         return render_template('Error.html')
-
-
-if __name__ == "__main__":
-    app.run()
